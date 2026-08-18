@@ -27,7 +27,7 @@ const GAMES_DATA = [
         shortDescription: "His vengeance against the Gods of Olympus years behind him, Kratos now lives as a man in the realm of Norse Gods and monsters.",
         descriptionP1: "God of War delivers a masterclass in cinematic storytelling and visceral combat. Living as a mortal man in the unforgiving Norse wilds, Kratos must master the rage that has driven him for decades while raising his young son, Atreus. Together, they embark on a deeply emotional pilgrimage to the highest peak in all the nine realms to scatter the ashes of their beloved Faye.",
         descriptionP2: "Wielding the frost-imbued Leviathan Axe and iconic Blades of Chaos, combat is intimate, weighty, and endlessly satisfying. The seamless, single-shot continuous camera cinematography pulls you into an epic mythic universe populated by fearsome trolls, dark elves, valkyries, and the vengeful Aesir gods.",
-        image: "asset/images/god of war.webp",
+        image: "asset/images/God of war.webp",
     },
     {
         id: "uncharted-lost-legacy",
