@@ -132,7 +132,7 @@ const GAMES_DATA = [
         shortDescription: "Drop into the island, gear up with weapons and gadgets, and battle to be the last player standing in Battle Royale and Zero Build modes.",
         descriptionP1: "Fortnite is a pop-culture juggernaut and dynamic battle royale experience powered by Unreal Engine 5. Drop from the Battle Bus onto an ever-evolving island, scavenge legendary weapons, drive high-speed sports cars, and outlast 99 other players in traditional Build battles or tactical Zero Build mode.",
         descriptionP2: "Beyond Battle Royale, Fortnite hosts expansive collaborative creative universes, LEGO Fortnite survival crafting, Rocket Racing, and live in-game concerts featuring global music superstars and iconic crossovers.",
-        image: "asset/images/fortnite.webp",
+        image: "asset/images/Fortnite.webp",
     },
     {
         id: "gta-v",
