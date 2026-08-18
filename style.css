@@ -190,43 +190,6 @@ body {
     color: var(--text-white);
 }
 
-.search-box {
-    position: relative;
-    min-width: 270px;
-}
-
-.search-input {
-    width: 100%;
-    background: var(--bg-surface);
-    border: var(--border-subtle);
-    color: var(--text-white);
-    font-family: var(--font-body);
-    font-size: 0.88rem;
-    padding: 8px 14px 8px 36px;
-    border-radius: var(--radius-pill);
-    outline: none;
-    transition: var(--transition);
-}
-
-.search-input::placeholder {
-    color: var(--text-subtle);
-}
-
-.search-input:focus {
-    border-color: #888888;
-    background: #252525;
-}
-
-.search-icon-svg {
-    position: absolute;
-    left: 12px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 15px;
-    height: 15px;
-    fill: var(--text-muted);
-    pointer-events: none;
-}
 
 /* game grid */
 .games-grid {

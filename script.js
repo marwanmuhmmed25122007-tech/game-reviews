@@ -156,13 +156,11 @@ const FALLBACK_IMAGE = 'data:image/svg+xml;charset=UTF-8,%3Csvg xmlns="http://ww
 
 // Application State
 let currentCategory = "ALL";
-let searchQuery = "";
 let activeGame = null;
 
 // DOM Elements
 const gamesGrid = document.getElementById("gamesGrid");
 const filterButtons = document.querySelectorAll(".filter-btn");
-const searchInput = document.getElementById("searchInput");
 const visibleCountText = document.getElementById("visibleCountText");
 const brandReset = document.getElementById("brandReset");
 
@@ -212,16 +210,7 @@ function updateCategoryCounts() {
 // Filter the games list
 function getFilteredGames() {
     return GAMES_DATA.filter(game => {
-        const matchesCategory = (currentCategory === "ALL") || (game.category === currentCategory);
-        const q = searchQuery.toLowerCase().trim();
-        const matchesSearch = !q || (
-            game.title.toLowerCase().includes(q) ||
-            game.category.toLowerCase().includes(q) ||
-            game.platform.toLowerCase().includes(q) ||
-            game.shortDescription.toLowerCase().includes(q) ||
-            (game.developer && game.developer.toLowerCase().includes(q))
-        );
-        return matchesCategory && matchesSearch;
+        return (currentCategory === "ALL") || (game.category === currentCategory);
     });
 }
 
@@ -235,19 +224,9 @@ function renderGamesGrid() {
           <div class="empty-state">
             <div class="empty-icon">🎮</div>
             <h3>No Games Found</h3>
-            <p>No games matched category "${escapeHtml(currentCategory)}" or search "${escapeHtml(searchQuery)}".</p>
+            <p>No games found in category "${escapeHtml(currentCategory)}".</p>
           </div>
         `;
-
-        const resetBtn = document.getElementById("btnResetFilters");
-        if (resetBtn) {
-            resetBtn.addEventListener("click", () => {
-                setCategory("ALL");
-                searchInput.value = "";
-                searchQuery = "";
-                renderGamesGrid();
-            });
-        }
         return;
     }
 
@@ -388,15 +367,7 @@ filterButtons.forEach(btn => {
 // Reset when clicking logo
 brandReset.addEventListener("click", (e) => {
     e.preventDefault();
-    searchInput.value = "";
-    searchQuery = "";
     setCategory("ALL");
-});
-
-// Search input
-searchInput.addEventListener("input", (e) => {
-    searchQuery = e.target.value;
-    renderGamesGrid();
 });
 
 // Modal Close
